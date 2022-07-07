@@ -24,7 +24,7 @@
     {% if messages %}
         {% for message in messages %}
         <div class="alert alert-{{ message.tags }} alert" role="alert">
-          {{ message }}
+          {{ item.title }} {{ message }}
           <button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
@@ -55,7 +55,7 @@
             <!-- Left -->
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item active">
-                    <a class="nav-link waves-effect" href="/">Home
+                    <a class="nav-link waves-effect" href="/djecommerce/static">Home
                         <span class="sr-only">(current)</span>
                     </a>
                 </li>
@@ -145,8 +145,9 @@
 
                     <p class="lead">
               <span class="mr-1">
+                  <span>{{ item.title }}</span>
                 {% if item.discount_price %}
-                <del>{{item.price}}</del>
+
                 <span>{{item.discount_price}}</span>
                     {% else %}
                    <span>{{item.price}}</span>
