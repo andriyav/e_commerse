@@ -32,7 +32,7 @@ def add_to_cart(request, slug):
             return redirect("core:product", slug=slug)
         else:
             order.items.add(order_item)
-            messages.info(request, "This item was added to your cart.")
+            messages.info(request, "Цей твоар був доданий до корзини")
             return redirect("core:product", slug=slug)
     else:
         ordered_date = timezone.now()
