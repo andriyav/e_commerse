@@ -28,7 +28,7 @@ def add_to_cart(request, slug):
         if order.items.filter(item__slug=item.slug).exists():
             order_item.quantity += 1
             order_item.save()
-            messages.info(request, "This item quantity was updated.")
+            messages.info(request, "Кількість товару була змінена")
             return redirect("core:product", slug=slug)
         else:
             order.items.add(order_item)
