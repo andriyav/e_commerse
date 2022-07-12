@@ -7,12 +7,12 @@ from django.contrib import messages
 
 class HomeView(ListView):
     model = Item
-    template_name = "core/home.html"
+    template_name = "home.html"
 
 
 class ItemViewDetail(DetailView):
     model = Item
-    template_name = "core/product.html"
+    template_name = "product.html"
 
 
 def add_to_cart(request, slug):
